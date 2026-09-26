@@ -1,46 +1,261 @@
-<!-- SUPPORT + TERMS -->
-<div class="container reveal" id="terms">
-  <div class="support-card">
-    <h3>Fitment Questions & Support</h3>
-    <p>
-      Have a specific aftermarket lip, bumper, or custom plate setup?
-      For fitment verification before ordering, contact
-      <a href="mailto:nsxtiltplate@gmail.com" class="contact-link">nsxtiltplate@gmail.com</a>
-    </p>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | NSX Tilt Plate Bracket</title>
+  <style>
+    /* CSS Variables matching your main site */
+    :root {
+      --bg-main: #0b0c0e;
+      --bg-card: #14171c;
+      --bg-card-border: #222730;
+      --text-main: #f0f2f5;
+      --text-muted: #9ba3b0;
+      --accent-color: #d12027; /* Red accent matching NSX aesthetic */
+      --accent-hover: #e62e35;
+      --container-max: 1000px;
+    }
 
-  <div style="max-width:800px;margin:auto;">
-    <div class="accordion-item" style="background:var(--bg-card);">
-      <details>
-        <summary style="text-transform:uppercase;letter-spacing:.5px;font-size:.9rem;">
-          Terms & Conditions of Sale – Aftermarket Hardware & Accessories
-        </summary>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        <div class="accordion-content legal-content">
-          <h4>1. Vehicle Compatibility & Road Legality Disclaimer</h4>
-          <p>(a) The Customer is solely responsible for determining whether the Product complies with relevant state or territory road transport legislation (e.g., VicRoads, Transport for NSW, TMR QLD) and Australian Design Rules (ADRs) prior to installation.</p>
-          <p>(b) The Seller makes no representation or warranty that the Product is compliant with local laws regarding licence plate angle, height, lighting, or visual obstruction when mounted on the Customer's specific vehicle configuration.</p>
-          <p>(c) Where a product is used on public roads, track days, or off-road, the Customer assumes all regulatory risks, including any defect notices, roadworthiness failures, or police fines.</p>
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-          <h4>2. Professional Installation & Maintenance</h4>
-          <p>(a) All products must be installed strictly in accordance with provided guidelines using appropriate mounting points, OEM hardware, or supplied fasteners.</p>
-          <p>(b) The Customer agrees to perform routine safety checks on the Product (checking bolt torque, fastener tightness, and checking for signs of fatigue or looseness) prior to operating the vehicle.</p>
-          <p>(c) The Seller accepts no responsibility for product detachment, damage, or failure caused by improper installation, lack of thread-locking compound where recommended, over-torquing, or vehicle modification.</p>
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 40px 20px;
+      width: 100%;
+    }
 
-          <h4>3. Assumption of Risk</h4>
-          <p>To the maximum extent permitted by law, the Customer voluntarily assumes all risks associated with the fitting, use, or misuse of the Product, including (but not limited to) property damage, vehicle bumper/paint damage, detachment at high speeds, or third-party claims resulting from inadequate installation or lack of maintenance.</p>
+    /* Header / Nav Styling */
+    header {
+      border-bottom: 1px solid var(--bg-card-border);
+      background: rgba(11, 12, 14, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
 
-          <h4>4. Australian Consumer Law & Limitation of Liability</h4>
-          <p>(a) Our goods come with guarantees that cannot be excluded under the Australian Consumer Law (ACL). You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure.</p>
-          <p>(b) To the fullest extent permitted by law, the Seller’s total liability for any claim arising out of or related to the Product—whether in contract, tort (including negligence), or statutory duty—is strictly limited, at the Seller's option, to:</p>
-          <p style="padding-left: 20px;">(i) Replacing the Product or supplying equivalent goods; or</p>
-          <p style="padding-left: 20px;">(ii) Refunding the purchase price paid for the Product.</p>
-          <p>(c) Under no circumstances shall the Seller be liable for indirect, incidental, or consequential damages, including loss of vehicle use, panel shop labour costs, or mechanical repair fees.</p>
-          
-          <h4>5. Governing Law</h4>
-          <p>These Terms are governed by the laws of Victoria, Australia.</p>
-        </div>
-      </details>
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      max-width: var(--container-max);
+      margin: 0 auto;
+    }
+
+    .brand-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .back-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--text-main);
+    }
+
+    /* Page Header Title */
+    .page-title {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 12px;
+      display: inline-block;
+    }
+
+    /* Support Card */
+    .support-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .support-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .support-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-link {
+      color: var(--text-main);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .contact-link:hover {
+      color: var(--accent-color);
+    }
+
+    /* Legal Content Box */
+    .legal-container {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: 8px;
+      padding: 32px;
+    }
+
+    .legal-content h4 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-top: 24px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .legal-content h4:first-child {
+      margin-top: 0;
+    }
+
+    .legal-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .sub-clause {
+      padding-left: 20px;
+    }
+
+    /* Footer Styling */
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--bg-card-border);
+      background: var(--bg-card);
+      padding: 24px 20px;
+    }
+
+    .footer-container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .copyright {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 24px 16px;
+      }
+
+      .legal-container {
+        padding: 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">NSX Tilt Plate Bracket</a>
+      <a href="index.html" class="back-link">← Back to Main Site</a>
     </div>
-  </div>
-</div>
+  </header>
+
+  <!-- MAIN TERMS CONTENT -->
+  <main class="container">
+    
+    <h1 class="page-title">Terms & Conditions</h1>
+
+    <!-- SUPPORT CALLOUT -->
+    <div class="support-card">
+      <h3>Fitment Questions & Support</h3>
+      <p>
+        Have a specific aftermarket lip, bumper, or custom plate setup?
+        For fitment verification before ordering, contact
+        <a href="mailto:nsxtiltplate@gmail.com" class="contact-link">nsxtiltplate@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- TERMS CONTAINER (Accordion Removed for Standalone Page) -->
+    <div class="legal-container">
+      <div class="legal-content">
+        <h4>1. Vehicle Compatibility & Road Legality Disclaimer</h4>
+        <p>(a) The Customer is solely responsible for determining whether the Product complies with relevant state or territory road transport legislation (e.g., VicRoads, Transport for NSW, TMR QLD) and Australian Design Rules (ADRs) prior to installation.</p>
+        <p>(b) The Seller makes no representation or warranty that the Product is compliant with local laws regarding licence plate angle, height, lighting, or visual obstruction when mounted on the Customer's specific vehicle configuration.</p>
+        <p>(c) Where a product is used on public roads, track days, or off-road, the Customer assumes all regulatory risks, including any defect notices, roadworthiness failures, or police fines.</p>
+
+        <h4>2. Professional Installation & Maintenance</h4>
+        <p>(a) All products must be installed strictly in accordance with provided guidelines using appropriate mounting points, OEM hardware, or supplied fasteners.</p>
+        <p>(b) The Customer agrees to perform routine safety checks on the Product (checking bolt torque, fastener tightness, and checking for signs of fatigue or looseness) prior to operating the vehicle.</p>
+        <p>(c) The Seller accepts no responsibility for product detachment, damage, or failure caused by improper installation, lack of thread-locking compound where recommended, over-torquing, or vehicle modification.</p>
+
+        <h4>3. Assumption of Risk</h4>
+        <p>To the maximum extent permitted by law, the Customer voluntarily assumes all risks associated with the fitting, use, or misuse of the Product, including (but not limited to) property damage, vehicle bumper/paint damage, detachment at high speeds, or third-party claims resulting from inadequate installation or lack of maintenance.</p>
+
+        <h4>4. Australian Consumer Law & Limitation of Liability</h4>
+        <p>(a) Our goods come with guarantees that cannot be excluded under the Australian Consumer Law (ACL). You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure.</p>
+        <p>(b) To the fullest extent permitted by law, the Seller’s total liability for any claim arising out of or related to the Product—whether in contract, tort (including negligence), or statutory duty—is strictly limited, at the Seller's option, to:</p>
+        <p class="sub-clause">(i) Replacing the Product or supplying equivalent goods; or</p>
+        <p class="sub-clause">(ii) Refunding the purchase price paid for the Product.</p>
+        <p>(c) Under no circumstances shall the Seller be liable for indirect, incidental, or consequential damages, including loss of vehicle use, panel shop labour costs, or mechanical repair fees.</p>
+
+        <h4>5. Governing Law</h4>
+        <p>These Terms are governed by the laws of Victoria, Australia.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="copyright">
+        © 2026 NSX Tilt Plate Bracket. Precision OEM+ Engineering | Melbourne, Australia. All Rights Reserved.
+      </div>
+      <div>
+        <a href="index.html" class="back-link">Return to Home</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
